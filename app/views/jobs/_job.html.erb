@@ -1,0 +1,9 @@
+<div>
+  <h2><%= job.title %></h2>
+  <h3><%= job.company.name %></h3>
+  <p>
+    <%= job.front_end ? 'front-end' : '' %>
+    <%= job.back_end ? 'back-end' : '' %>
+  </p>
+  <p><%= job.description %></p>
+</div>

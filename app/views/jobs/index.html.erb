@@ -2,33 +2,37 @@
 
 <h1>Jobs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Company</th>
-      <th>Front end</th>
-      <th>Back end</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<details>
+  <summary>All</summary>
+  <%= render @jobs %>
+</details>
 
-  <tbody>
-    <% @jobs.each do |job| %>
-      <tr>
-        <td><%= job.company %></td>
-        <td><%= job.front_end %></td>
-        <td><%= job.back_end %></td>
-        <td><%= job.title %></td>
-        <td><%= job.description %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h2>At Xero</h2>
+<%= render @xero_jobs %>
+
+<h2>Front-end</h2>
+<%= render @front_end_jobs %>
+
+<h2>Back-end</h2>
+<%= render @back_end_jobs %>
+
+<h2>Full stack (front-end ∩ back-end)</h2>
+<%= render @full_stack_jobs %>
+
+<h2>I hate back-end (back-end')</h2>
+<%= render @i_hate_back_end_jobs %>
+
+<h2>Atlassian or Xero (atlassian jobs U xero jobs)</h2>
+<%= render @xero_or_atlassian_jobs %>
+
+<h2>Finance (finance)</h2>
+<%= render @finance_jobs %>
+
+<h2>Non-finance full stack (full stack - finance jobs)</h2>
+<%= render @non_finance_full_stack_jobs %>
+
+<h2>JavaScript</h2>
+<%= render @javascript_jobs %>
 
 <br>
 
