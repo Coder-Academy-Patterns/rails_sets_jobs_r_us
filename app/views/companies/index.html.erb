@@ -2,27 +2,32 @@
 
 <h1>Companies</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Industry</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h2>All</h2>
+<%= render @companies %>
 
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.name %></td>
-        <td><%= company.industry %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h2>Finance</h2>
+<%= render @finance_companies %>
+
+<h2>Productivity</h2>
+<%= render @productivity_companies %>
+
+<h2>Ecommerce</h2>
+<%= render @ecommerce_companies %>
+
+<h2>Hiring</h2>
+<%= render @companies_hiring %>
+
+<h2>Not Hiring (hiring')</h2>
+<%= render @companies_not_hiring %>
+
+<h2>Finance &amp; Hiring (finance ∩ hiring)</h2>
+<%= render @finance_companies_hiring %>
+
+<h2>Union (ecommerce ∪ utility)</h2>
+<%= render @union_companies %>
+
+<h2>Non-finance and hiring (hiring - finance)</h2>
+<%= render @non_finance_companies_hiring %>
 
 <br>
 
